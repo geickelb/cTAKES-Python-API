@@ -27,7 +27,7 @@ cd $SOURCE/..
 if [ ! -d "$SOURCE" ]; then
 	echo "->  Checking out cTAKES from Subversion repo"
 	# svn co https://svn.apache.org/repos/asf/ctakes/trunk "$SOURCE"
-	out_svn=$(svn co https://svn.apache.org/repos/asf/ctakes/tags/ctakes-3.1.0 "$SOURCE")
+	out_svn=$(svn co https://svn.apache.org/repos/asf/ctakes/tags/ctakes-4.0.0 "$SOURCE")
 else
 	echo "->  Updating cTAKES repo"
 	cd "$SOURCE"
@@ -62,7 +62,7 @@ mv $(basename ${base%-bin.tar.gz}) "$TARGET"
 cd "$TARGET"
 if [ -z ctakes-resources.zip ]; then
 	echo "->  Downloading cTAKES resources"
-	curl -o ctakes-resources.zip "http://hivelocity.dl.sourceforge.net/project/ctakesresources/ctakes-resources-3.1.0.zip"
+	curl -o ctakes-resources.zip "http://hivelocity.dl.sourceforge.net/project/ctakesresources/ctakes-resources-4.0.0.zip"
 	tar xzf ctakes-resources.zip
 fi
 
