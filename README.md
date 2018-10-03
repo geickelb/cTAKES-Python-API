@@ -41,23 +41,3 @@
         UMLS_PASSWORD='password'
 
 > This currently does not work correctly. Being updated soon!
-
-
-### MetaMap ###
-
-To use MetaMap, download and install MetaMap:
-
-1. Download [from NLM](http://metamap.nlm.nih.gov/#Downloads)
-2. Extract the archive into our root directory and rename it to `metamap`
-3. Copy the script `metamap-extras/run.sh` to `metamap/`
-4. Run the install script:
-    
-        ./metamap/bin/install.sh
-
-
-### NLTK ###
-
-requirements:
-
-- nltk
-
