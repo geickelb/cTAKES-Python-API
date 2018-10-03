@@ -1,5 +1,6 @@
 ### cTAKES Python API Install Instructions ###
-==========================
+
+
 
 1. Install Maven 
 
