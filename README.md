@@ -40,7 +40,7 @@
         UMLS_USERNAME='username'
         UMLS_PASSWORD='password'
 
-> This currently does not work correctly.
+> This currently does not work correctly. Being updated soon!
 
 
 ### MetaMap ###
