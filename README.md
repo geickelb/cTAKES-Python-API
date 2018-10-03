@@ -1,16 +1,32 @@
-ClinicalTrials.gov Modules
+### cTAKES Python API Install Instructions ###
 ==========================
 
-A set of classes to be used in projects related to ClinicalTrials.gov.
+1. Install Maven 
 
-
-### cTAKES ###
-
-To use the ctakes classes we need to install cTAKES:
-
-1. Install Maven (This is for OS X, requires [Homebrew][], adapt accordingly)
+    ###### Mac OSX ######
     
         brew install maven
+        
+    ###### CentOS 7 ######
+        
+        yum install -y java-1.8.0-openjdk-devel
+        
+        cd /usr/local/src
+        wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+        
+        tar -xf apache-maven-3.5.4-bin.tar.gz
+        mv apache-maven-3.5.4/ apache-maven/ 
+        
+        cd /etc/profile.d/
+        vim maven.sh
+        
+        export M2_HOME=/usr/local/src/apache-maven
+        export PATH=${M2_HOME}/bin:${PATH}
+        
+        chmod +x maven.sh
+        source /etc/profile.d/maven.sh
+        
+         mvn --version
 
 2. Run the script `ctakes-extras/ctakes-install.sh`, which will:
     - checkout a copy of cTAKES into `./ctakes-svn` (if you haven't already) or update from the SVN repo
