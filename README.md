@@ -26,7 +26,7 @@
         chmod +x maven.sh
         source /etc/profile.d/maven.sh
         
-         mvn --version
+        mvn --version
 
 2. Run the script `ctakes-extras/ctakes-install.sh`, which will:
     - checkout a copy of cTAKES into `./ctakes-svn` (if you haven't already) or update from the SVN repo
