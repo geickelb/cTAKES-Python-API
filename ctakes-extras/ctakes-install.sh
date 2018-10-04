@@ -77,13 +77,13 @@ if [ ! -d "${CTAKES_SRC_HOME}" ]; then
 	mkdir ${CTAKES_SRC_HOME}
 	cd ${CTAKES_SRC_HOME}
 
-	printf "\n\u0F36 Fetching cTAKES git source...\n"
+	printf "\n\u0F36 Fetching cTAKES git source...\n\n"
 	git init .
 	git remote add apache https://github.com/apache/ctakes.git
 	git fetch apache
 	git pull apache trunk
 
-	printf "\n\u0F36 Rebasing after svn checkin...\n"
+	printf "\n\u0F36 Rebasing after svn checkin...\n\n"
 	git checkout trunk
 	svn update
 	git checkout .
