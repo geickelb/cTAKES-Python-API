@@ -124,5 +124,5 @@ fi
 # cp "$ORIG"/*.java "$CTAKES_SRC_HOME/"
 # cp "$ORIG"/*.xml "$CTAKES_SRC_HOME/"
 
-printf "\n\u0FC9>  Done!"
+printf "\n\u0FC9>  Done!\n\n"
 
