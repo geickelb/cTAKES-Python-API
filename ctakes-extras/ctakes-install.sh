@@ -50,7 +50,7 @@ fi
 
 # warn if we already have an install
 if [ -d "$CTAKES_SRC_HOME" ]; then
-	printf "\n\u0F36 cTakes install already exists. Remove it to install again or execute run.sh to start the program."
+	printf "\n\u0F36 cTakes install already exists. Remove it to install again or execute run.sh to start the program.\n\n"
 	exit 1
 fi
 
