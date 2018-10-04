@@ -6,6 +6,8 @@
 #	2012-12-13	Created by Pascal Pfiffner
 #
 
+######## REMOVE #########
+
 import datetime
 import dateutil.parser
 import logging
