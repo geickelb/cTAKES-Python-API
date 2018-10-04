@@ -171,12 +171,12 @@ if '__main__' == __name__:
 		handle.write("History of clincally significant hypogammaglobulinemia, common variable immunodeficiency, or humeral immunodeficientncy")
 	
 	# run
-	print "-->  Starting"
+	print("-->  Starting")
 	try:
 		myct.run()
 	except Exception as e:
-		print "xx>  Failed: %s" % e
+		print("xx>  Failed: %s" % e)
 	
 	# TODO: parse output
 	
-	print "-->  Done"
+	print ("-->  Done")

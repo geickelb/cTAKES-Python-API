@@ -8,6 +8,7 @@ umls.sh
 ctakes
 ctakes-svn
 ctakes-test
+apache-ctakes-4.0.0
 
 # ignore MetaMap install
 metamap
