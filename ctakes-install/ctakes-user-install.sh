@@ -1,28 +1,6 @@
 #!/bin/bash
 
-### Custom Functions ###
-progressfilt ()
-{
-    local flag=false c count cr=$'\r' nl=$'\n'
-    while IFS='' read -d '' -rn 1 c
-    do
-        if $flag
-        then
-            printf '%c' "$c"
-        else
-            if [[ $c != $cr && $c != $nl ]]
-            then
-                count=0
-            else
-                ((count++))
-                if ((count > 1))
-                then
-                    flag=true
-                fi
-            fi
-        fi
-    done
-}
+#TODO: Add better error handling/troubleshooting 
 
 ### Script Beginning ###
 
@@ -69,7 +47,7 @@ fi
 if [ ! -d "CTAKES_HOME" ]; then
 	printf "\n\u0F36 Downloading cTAKES from Apache repo...\n\n"
 
-    wget --progress=bar:force http://www-eu.apache.org/dist/ctakes/ctakes-4.0.0/apache-ctakes-4.0.0-bin.tar.gz -P $ORIG/tmp/ 2>&1 | progressfilt
+    wget --progress=bar:force http://www-eu.apache.org/dist/ctakes/ctakes-4.0.0/apache-ctakes-4.0.0-bin.tar.gz -P $ORIG/tmp/ 2>&1 | tail -f -n +6
     tar -xvf $ORIG/tmp/apache-ctakes-4.0.0-bin.tar.gz -C "$ORIG/$CTAKES_HOME"
 fi
 
@@ -77,7 +55,7 @@ fi
 
 printf "\n\u0F36 Getting cTAKES resource files...\n\n"
 cd $ORIG/tmp
-wget --progress=bar:force http://sourceforge.net/projects/ctakesresources/files/ctakes-resources-4.0-bin.zip 2>&1 | progressfilt
+wget --progress=bar:force http://sourceforge.net/projects/ctakesresources/files/ctakes-resources-4.0-bin.zip 2>&1 | tail -f -n +6
 
 printf "\u0F36 Unzipping and moving resource files...\n\n"
 unzip ctakes-resources-4.0-bin.zip
