@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#TODO: Add better error handling/troubleshooting 
+#TODO: Add better error handling/troubleshooting.
 
 ### Script Beginning ###
 
