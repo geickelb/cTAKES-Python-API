@@ -8,4 +8,4 @@
     - Remove/clean `/tmp` directory from `ctakes-install`
     - Set UMLS `username` and `password` for `/bin/runctakesCVD.sh` & `/bin/runctakesCPE.sh` (Optional to use UMLS related dictionaries)
 
-Note: If you don't have a UMLS username & password you'll need to request one at https://uts.nlm.nih.gov/license.html (takes approximately 1 day to get approved)!
+Note: If you don't have a UMLS username & password you'll need to request one at https://uts.nlm.nih.gov/license.html
