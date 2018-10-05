@@ -106,15 +106,15 @@ then
         if [[ $password_1 = $password_2 ]];then
             credentials=" -Dctakes.umlsuser=$username -Dctakes.umlspw=$password_1"
 
-            sed -i -e "s/\(java\)/\1$credentials/" ./apache-ctakes-4.0.0/bin/runctakesCVD.sh
-            sed -i -e "s/\(java\)/\1$credentials/" ./apache-ctakes-4.0.0/bin/runctakesCPE.sh
+            sed -i -e "s/\(java\)/\1$credentials/" $ORIG/apache-ctakes-4.0.0/bin/runctakesCVD.sh
+            sed -i -e "s/\(java\)/\1$credentials/" $ORIG/apache-ctakes-4.0.0/bin/runctakesCPE.sh
         else
             printf "\n༶ Password mismatch try again...\n"
             set_password
         fi
     }
     set_password
-    printf "\n\n\u0F36 UMLS credentials updated!\n"
+    printf "\n\u0F36 UMLS credentials updated!\n"
 else
     printf "\n\u0F36 No worries you can add them manually later!\n"
 fi
