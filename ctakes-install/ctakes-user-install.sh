@@ -63,37 +63,42 @@ cp -R $ORIG/tmp/resources/* $ORIG/apache-ctakes-4.0.0/resources
 rm -r $ORIG/tmp/
 
 # Update UMLS Credentials #
+if [ ! -f $PWD/umls.sh ]; then
+    read -r -p "
+    ༶ Add UMLS credentials? [y/N] " response
+    response=${response,,}
 
-read -r -p "
-༶ Add UMLS credentials? [y/N] " response
-response=${response,,}
+    if [[ "$response" =~ ^(yes|y)$ ]]; 
+    then
+        touch $PWD/umls.sh
+        printf "#!/bin/bash \n\nUMLS_USERNAME=\"SAMPLE_USER\"\nUMLS_PASSWORD=\"SAMPLE_PASSWORD\"\n\nexport UMLS_USERNAME\nexport UMLS_PASSWORD" >> $PWD/umls.sh
+        chmod +x $PWD/umls.sh
 
-if [[ "$response" =~ ^(yes|y)$ ]]; 
-then
-    read -r -p "༶ Username: `echo $'\n> '`" username
-    username=${username,,}
+        read -r -p "༶ Username: `echo $'\n> '`" username
+        username=${username,,}
 
-    set_password() {
+        set_password() {
 
-        read -rs -p "༶ Password: `echo $'\n> '`" password_1
-        password_1=${password_1}
+            read -rs -p "༶ Password: `echo $'\n> '`" password_1
+            password_1=${password_1}
 
-        read -rs -p "`echo $'\r'`༶ Verify Password: `echo $'\n> '`" password_2
-        password_2=${password_2}
+            read -rs -p "`echo $'\r'`༶ Verify Password: `echo $'\n> '`" password_2
+            password_2=${password_2}
 
-        if [[ $password_1 = $password_2 ]];then
-            credentials=" -Dctakes.umlsuser=$username -Dctakes.umlspw=$password_1"
+            if [[ $password_1 = $password_2 ]];then
 
-            sed -i -e "s/\(java\)/\1$credentials/" $ORIG/apache-ctakes-4.0.0/bin/runctakesCVD.sh
-            sed -i -e "s/\(java\)/\1$credentials/" $ORIG/apache-ctakes-4.0.0/bin/runctakesCPE.sh
-        else
-            printf "\n༶ Password mismatch try again...\n"
-            set_password
-        fi
-    }
-    set_password
-    printf "\n\u0F36 UMLS credentials updated!\n"
-else
-    printf "\n\u0F36 No worries you can add them manually later!\n"
+               sed -i -e "s/SAMPLE_USER/$username/g" $PWD/umls.sh
+               sed -i -e "s/SAMPLE_PASSWORD/$password_1/g" $PWD/umls.sh
+
+            else
+                printf "\n༶ Password mismatch try again...\n"
+                set_password
+            fi
+        }
+        set_password
+        printf "\n\u0F36 UMLS credentials updated!\n"
+    else
+        printf "\n\u0F36 No worries you can add them manually later!\n"
+    fi
 fi
 printf "\n\u0FC9 DONE!\n\n"
