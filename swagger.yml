@@ -1,0 +1,37 @@
+swagger: "2.0"
+info:
+  description: Coonects to the cTAKES Default Clinical Pipeline through a RESTful service!
+  version: "1.0.0"
+  title: cTAKES RESTful API
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+paths:
+  /defaultClinicalPipline:
+    get:
+      operationId: "files.read"
+      tags:
+        - "Default Clinical Pipeline"
+      summary: "Plain text file structure supported by the server application"
+      description: "Read plain text file"
+      responses:
+        200:
+          description: "Successful read plain text file operation!"
+          schema:
+            type: "array"
+            items:
+              properties:
+                id:
+                  type: "string"
+                title:
+                  type: "string"
+                author:
+                  type: "string"
+                client_name:
+                  type: "string"
+                timestamp:
+                  type: "string"
