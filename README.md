@@ -8,15 +8,15 @@
         - Diseases/Disorders and 
         - Medications.
         
-   Input: `Plain Text File`
+   #### Input: #### `Plain Text File`
    
-   Output: `XMI File`
+   #### Output: #### `XMI File`
         
    Orginal wiki page: https://cwiki.apache.org/confluence/display/CTAKES/Default+Clinical+Pipeline
 
 ### cTAKES Python API Install Instructions ###
 
-1. Run the script `ctakes-install/ctakes-install.sh`, which will:
+1. Run the script `##### ctakes-install/ctakes-install.sh #####`, which will:
     - Download a copy of cTAKES into `./ctakes-install/tmp`
     - Extract cTAKES then copy into `ctakes-install (cTAKES_HOME)` directory
     - Download `ctakes-resources-4.0-bin.zip` into `./ctakes-install/tmp`
