@@ -8,7 +8,7 @@
         - Diseases/Disorders and 
         - Medications.
         
-   Input: `Plain Text`
+   Input: `Plain Text File`
    Output: `XMI File`
         
    Orginal wiki page: https://cwiki.apache.org/confluence/display/CTAKES/Default+Clinical+Pipeline
