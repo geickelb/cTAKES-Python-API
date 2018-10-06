@@ -43,11 +43,11 @@ if [ -d "$CTAKES_HOME" ]; then
 fi
 
 # Download cTAKES user install file linux #
-#FIXME: Progress bar isn\'t displaying'
-if [ ! -d "CTAKES_HOME" ]; then
+#FIXME: 
+if [ ! -d "$CTAKES_HOME" ]; then
 	printf "\n\033[92m\u0F36\033[0m Downloading cTAKES from Apache repo...\n\n"
 
-    wget --progress=bar:force -o /dev/null http://www-eu.apache.org/dist/ctakes/ctakes-4.0.0/apache-ctakes-4.0.0-bin.tar.gz -P $ORIG/tmp/ 2>&1 | tail -f -n +6
+    wget --progress=bar:force http://www-eu.apache.org/dist/ctakes/ctakes-4.0.0/apache-ctakes-4.0.0-bin.tar.gz -P "$ORIG/tmp/" 2>&1 | tail -f -n +6
     tar -xvf $ORIG/tmp/apache-ctakes-4.0.0-bin.tar.gz -C "$ORIG/$CTAKES_HOME"
 fi
 
@@ -55,7 +55,7 @@ fi
 
 printf "\n\033[92m\u0F36\033[0m Getting cTAKES resource files...\n\n"
 cd $ORIG/tmp
-wget --progress=bar:force -o /dev/null http://sourceforge.net/projects/ctakesresources/files/ctakes-resources-4.0-bin.zip 2>&1 | tail -f -n +6
+wget --progress=bar:force http://sourceforge.net/projects/ctakesresources/files/ctakes-resources-4.0-bin.zip 2>&1 | tail -f -n +6
 
 printf "\033[92m\u0F36\033[0m Unzipping and moving resource files...\n\n"
 unzip ctakes-resources-4.0-bin.zip
