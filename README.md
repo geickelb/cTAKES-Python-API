@@ -14,7 +14,7 @@
 
 ### cTAKES Install Instructions ###
 
-1. Run the script `ctakes-install/ctakes-install.sh`, which will:
+1. Execute `./ctakes-install/ctakes-install.sh`, which will:
     - Download a copy of cTAKES into `./ctakes-install/tmp`
     - Extract cTAKES then copy into `ctakes-install (cTAKES_HOME)` directory
     - Download `ctakes-resources-4.0-bin.zip` into `./ctakes-install/tmp`
