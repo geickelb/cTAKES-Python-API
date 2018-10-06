@@ -8,7 +8,7 @@
         - Diseases/Disorders and 
         - Medications.
         
-   #### Input: #### `Plain Text File`
+   * Input: * `Plain Text File`
    
    #### Output: #### `XMI File`
         
