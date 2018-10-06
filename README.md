@@ -1,6 +1,12 @@
 ### What you'll be able to do ###
 
-1. Interact with cTAKES `Default Clinical Pipeline` through a Python RESTful API.
+1. Interact with cTAKES `Default Clinical Pipeline` through a Python RESTful API doing:
+    - Annotations for;
+        - Anatomical sites, 
+        - Signs/Symptoms, 
+        - Procedures,
+        - Diseases/Disorders and 
+        - Medications.
 
 ### cTAKES Python API Install Instructions ###
 
