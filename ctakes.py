@@ -190,7 +190,7 @@ if '__main__' == __name__:
     print("\n\033[92m\u0F36 \033[0mStarting cTAKES Java Application...\n")
     try:
         my_ctakes.run()
-        print("\n\033[92m\u0FC9 DONE!\n")
+        print("\n\033[92m\u263A \033[0mDONE!\n")
     except Exception as e:
         print("\033[91mFAILED:\033[0m {}\n".format(e))
 
