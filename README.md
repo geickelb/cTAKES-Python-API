@@ -1,3 +1,7 @@
+### What you'll be able to do ###
+
+1. Interact with cTAKES `Default Clinical Pipeline` through a Python RESTful API.
+
 ### cTAKES Python API Install Instructions ###
 
 1. Run the script `ctakes-install/ctakes-install.sh`, which will:
