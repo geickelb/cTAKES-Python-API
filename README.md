@@ -7,6 +7,11 @@
         - Procedures,
         - Diseases/Disorders and 
         - Medications.
+        
+   Input: `Plain Text`
+   Output: `XMI File`
+        
+   Orginal wiki page: https://cwiki.apache.org/confluence/display/CTAKES/Default+Clinical+Pipeline
 
 ### cTAKES Python API Install Instructions ###
 
